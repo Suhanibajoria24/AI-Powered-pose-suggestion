@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenCode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar Section -->
+    <nav class="navbar">
+        <div class="website-name">
+            <h1>GenCode</h1>
+        </div>
+        <ul class="navbar-links">
+            <li>Home</li>
+            <li>About</li>
+            <li>Features</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <!-- Upload Your Photo Section -->
+    <section class="upload-photo-section">
+        <h2>Upload Your Photo</h2>
+        <p>Upload an image for pose suggestions and inspiration:</p>
+        <input type="file" id="uploadImage" name="uploadImage" accept="image/*">
+        <button onclick="uploadImage()">Upload</button>
+
+        <!-- This section is hidden by default and displayed after upload -->
+        <div id="actionOptions" class="action-options" style="display:none;">
+            <button onclick="generateAIImage()">Generate Image with AI</button>
+            <button onclick="findReferenceImage()">Find Reference Image</button>
+        </div>
+    </section>
+
+    <script>
+        function uploadImage() {
+            const uploadInput = document.getElementById('uploadImage');
+            const actionOptions = document.getElementById('actionOptions');
+
+            // Check if a file is selected
+            if (uploadInput.files && uploadInput.files[0]) {
+               
+                actionOptions.style.display = 'block';  
+            } else {
+                alert('No file selected!');
+            }
+        }
+
+        function generateAIImage() {
+            alert('Generate AI Image functionality coming soon!');
+            // image displaying
+        }
+
+        function findReferenceImage() {
+            alert('Find Reference Image functionality coming soon!');
+            // for api integration
+        }
+    </script>
+</body>
+</html>
